@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+
+<h3>Today: {{today | date: 'dd/MM/yyyy hh:mm:ss'}}</h3>
+
+<img [src]='imageUrl' title="movies" alt="movies img" />
+<div>
+    <span>
+        The selling price is {{sellingPrice | currency }} and profit percentage is: {{sellingPrice | profit: 15 | currency}}
+    </span>
+</div>
+<hr>
+
+<button (click)="setTimeToNow()"> Movies</button>
+
+<input #color placeholder="set color" /> 
+<button (click)="setColor(color.value)"> set Color</button>
+
+
+<p [class.sampleCont]='isSampleApplied'>
+orem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu
+
+</p>
+
+<p [class]='multipleClasses' [style.color]='pColor'>
+This is a paragraph that has multipleClasses defined in var
+</p>
+
